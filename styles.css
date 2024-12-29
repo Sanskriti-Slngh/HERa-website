@@ -1,0 +1,337 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Updated to Times New Roman */
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #000; /* Black background */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #1a1a1a; /* Dark shade for header */
+    color: #f0f0f0;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+    margin-left: 20px;
+    font-size: 2em;
+    color: #ff69b4; /* Hot pink */
+}
+
+header nav {
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #00bfff; /* Deep sky blue */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff69b4; /* Hot pink on hover */
+}
+
+/* Hero Section */
+#hero {
+    background: url('images/hero-image.jpg') no-repeat center center/cover;
+    color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 80px; /* To prevent content from being hidden behind fixed header */
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ff1493; /* Deep pink */
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #add8e6; /* Light blue */
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff69b4; /* Hot pink */
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #00bfff; /* Deep sky blue */
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+    background: #000;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #ff69b4; /* Hot pink */
+}
+
+#about p,
+#travel-guide form p,
+#services .service p,
+#resources ul,
+#contact form p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #add8e6; /* Light blue */
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#services .service {
+    margin-bottom: 30px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#services .service h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #00bfff; /* Deep sky blue */
+}
+
+#services .service p {
+    color: #f0f0f0;
+}
+
+/* Travel Guide Section */
+#travel-guide form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#travel-guide form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ff69b4; /* Hot pink */
+    font-weight: bold;
+}
+
+#travel-guide form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#travel-guide form button {
+    width: 100%;
+    padding: 10px;
+    background: #00bfff; /* Deep sky blue */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#travel-guide form button:hover {
+    background: #ff69b4; /* Hot pink */
+    color: #fff;
+}
+
+#travel-info {
+    margin-top: 30px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #add8e6; /* Light blue */
+}
+
+/* Resources Section */
+#resources ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#resources ul li {
+    margin: 10px 20px;
+}
+
+#resources ul li a {
+    color: #00bfff; /* Deep sky blue */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#resources ul li a:hover {
+    color: #ff69b4; /* Hot pink on hover */
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff69b4; /* Hot pink */
+    font-weight: bold;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact form button {
+    width: 100%;
+    padding: 10px;
+    background: #ff69b4; /* Hot pink */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#contact form button:hover {
+    background: #00bfff; /* Deep sky blue */
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ff69b4; /* Hot pink */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #00bfff; /* Deep sky blue on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    #resources ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .service {
+        margin-bottom: 20px;
+    }
+}

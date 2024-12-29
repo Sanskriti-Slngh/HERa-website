@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERa - Safe Abortion Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>HERa</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#travel-guide">Travel Guide</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Your Safe Path to Legal Abortion Services</h2>
+            <p>HERa assists you in navigating the complexities of accessing legal abortion services by providing comprehensive travel guides, resources, and support.</p>
+            <a href="#travel-guide" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About HERa</h2>
+            <p>HERa is dedicated to supporting individuals seeking legal abortion services by offering detailed plans, including transportation and accommodation, to ensure a safe and informed journey to the nearest legal clinic.</p>
+        </div>
+    </section>
+
+    <!-- Travel Guide Section -->
+    <section id="travel-guide">
+        <div class="container">
+            <h2>Find Your Travel Guide</h2>
+            <form id="location-form">
+                <label for="location">Enter Your Location:</label>
+                <input type="text" id="location" name="location" placeholder="City, State or ZIP Code" required>
+                <button type="submit" class="btn">Get Travel Guide</button>
+            </form>
+            <div id="travel-info">
+                <!-- Travel guide information will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="container">
+            <h2>Essential Resources</h2>
+            <ul>
+                <li><a href="https://www.plannedparenthood.org/" target="_blank">Planned Parenthood</a></li>
+                <li><a href="https://prochoice.org/" target="_blank">National Abortion Federation</a></li>
+                <li><a href="https://www.guttmacher.org/" target="_blank">Guttmacher Institute</a></li>
+                <li><a href="https://reproductiverights.org/" target="_blank">Center for Reproductive Rights</a></li>
+                <li><a href="https://www.aclu.org/issues/reproductive-freedom" target="_blank">ACLU - Reproductive Freedom</a></li>
+                <li><a href="https://www.findhelp.org/" target="_blank">FindHelp - Transportation and Support</a></li>
+                <li><a href="https://www.usa.gov/abortion" target="_blank">USA.gov - Abortion</a></li>
+                <li><a href="https://www.nichd.nih.gov/" target="_blank">NICHD - Abortion</a></li>
+                <li><a href="https://www.healthfinder.gov/" target="_blank">Healthfinder.gov</a></li>
+                <li><a href="https://www.nimh.nih.gov/" target="_blank">NIMH - Mental Health Support</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HERa. All rights reserved.</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Travel Guide (Basic Example) -->
+    <script>
+        document.getElementById('location-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const location = document.getElementById('location').value;
+            const travelInfoDiv = document.getElementById('travel-info');
+            
+            // Placeholder for travel guide information
+            // In a real application, you'd fetch this data from an API or database
+            travelInfoDiv.innerHTML = `
+                <h3>Travel Guide for ${location}</h3>
+                <p>Based on your location, here are the steps to reach the nearest legal abortion clinic:</p>
+                <ol>
+                    <li>Identify the closest state with legal abortion services.</li>
+                    <li>Plan your transportation using available options:</li>
+                        <ul>
+                            <li>Rideshare services (e.g., Uber, Lyft)</li>
+                            <li>Bus services (e.g., Greyhound, Megabus)</li>
+                            <li>Car rentals or driving</li>
+                        </ul>
+                    <li>Book accommodation near the clinic if an overnight stay is necessary.</li>
+                    <li>Review the clinic's requirements and prepare necessary documentation.</li>
+                    <li>Contact legal assistance if needed.</li>
+                </ol>
+                <p>For detailed information, refer to our <a href="#resources">Resources</a> section.</p>
+            `;
+        });
+    </script>
+</body>
+</html>
